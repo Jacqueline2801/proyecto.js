@@ -78,7 +78,9 @@ console.log(`IVA discriminado: ${discriminado}`);
 let conIva = total * 1.21;
 console.log(`Importe total c/ IVA: ${conIva}`);
 class ListaMayorista {
+  static id = 0;
   constructor(marca, contenido, cantidad, precio) {
+    this.id = ++ListaMayorista.id; //esto es un contador//
     this.marca = marca;
     this.contenido = contenido;
     this.cantidad = cantidad;
@@ -118,3 +120,48 @@ console.log("procuto5:");
 producto5.precioUnidad();
 console.log("procuto6:");
 producto6.precioUnidad();
+const productos = [];
+const cargarProducto = () => {
+  let cargarModelo = prompt("Ingrese el preducto");
+  let cargarContenido = prompt("Ingrese kg/l del producto");
+  let cargarCantidad = prompt("Ingrese las unidades del producto");
+  let cargarprecio = parseInt(prompt("ingrese el precio del producto"));
+  const producto = new producto(
+    cargarModelo,
+    cargarContenido,
+    cargarCantidad,
+    cargarprecio
+  );
+  producto.push(producto);
+  console.log(productos);
+};
+const VerProducto = () => {
+  if (productos.length == 0) {
+    console.log("No hay productos cargados");
+  } else {
+    console.log(productos);
+  }
+};
+let menu = parseInt(
+  prompt(
+    "¡Bienvenido! Elija 1 para ver el catologo, elija 2 para cargar un prodcuto o 3 para salir"
+  )
+);
+while (menu !== 3) {
+  switch (menu) {
+    case 1:
+      VerProducto();
+      break;
+    case 2:
+      cargarProducto();
+      break;
+    default:
+      alert("¡La opcion es incorrecta!");
+  }
+  menu = parseInt(
+    prompt(
+      "¡Bienvenido! Elija 1 para ver el catologo, elija 2 para cargar un prodcuto o 3 para salir"
+    )
+  );
+}
+console.log("¡Gracias!");
