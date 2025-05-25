@@ -120,7 +120,7 @@ console.log("procuto5:");
 producto5.precioUnidad();
 console.log("procuto6:");
 producto6.precioUnidad();
-const productos = [];
+const Cargarproductos = [];
 const cargarProducto = () => {
   let cargarModelo = prompt("Ingrese el preducto");
   let cargarContenido = prompt("Ingrese kg/l del producto");
@@ -165,3 +165,168 @@ while (menu !== 3) {
   );
 }
 console.log("¡Gracias!");
+const sucursal = "Lomas de Zamora";
+const direccion = "Goya 579";
+localStorage.setItem("sucursal", sucursal);
+localStorage.setItem("direccion", direccion);
+console.log(localStorage.getItem("sucursal"));
+const sucursal2 = {
+  surcursal: "Belgrano",
+  direccion: "segurola 1739",
+};
+const sucursalJSON = JSON.stringify(sucursal2);
+localStorage.setItem("sucursal2", sucursalJSON);
+console.log(localStorage.getItem("sucursal2"));
+const direccionJSON = JSON.parse(localStorage.getItem("sucursal2"));
+console.log(sucursalJSON);
+
+let operacion = prompt("ingrese si desea multiplicar o divir");
+let primerNumero = parseInt(prompt("ingrese el primer numero"));
+let segundoNumero = parseInt(prompt("ingrese el segundo numero"));
+function elegirOperacion(operacion) {
+  if (operacion == "multiplicar") {
+    return (a, b) => a * b;
+  } else if (operacion == "dividir") {
+    return (a, b) => a / b;
+  }
+}
+let operacionElegida = elegirOperacion(operacion);
+console.log(operacionElegida(primerNumero, primerNumero));
+const numeros = [1, 2, 3, 4, 5];
+function numerador(numeros, visualizar) {
+  for (const numero of numeros) {
+    visualizar(numero);
+  }
+}
+const tablaDel10 = [];
+numerador(numero, (numero) => {
+  tablaDel10.push(numero * 10);
+});
+console.log(tablaDel10);
+const Productos = [
+  {
+    id: 1,
+    nombre: "sal colosal",
+    precio: 7500,
+  },
+  {
+    id: 2,
+    nombre: "presto pronta",
+    precio: 12000,
+  },
+  {
+    id: 3,
+    nombre: "fideos nido Doña Irma",
+    precio: 10000,
+  },
+  {
+    id: 4,
+    nombre: "Baggio 1L",
+    precio: 6500,
+  },
+  {
+    id: 5,
+    nombre: "jabon en polvo ala x400gr",
+    precio: 27000,
+  },
+  {
+    id: 6,
+    nombre: "alfajor guaymallen",
+    precio: 7500,
+  },
+  {
+    id: 7,
+    nombre: "turron Arcor",
+    precio: 5500,
+  },
+  {
+    id: 8,
+    nombre: "jugo cepita botela x 1L",
+    precio: 7000,
+  },
+];
+forEach();
+Productos.forEach((producto) => {
+  console.log(`Producto: ${producto.nombre}, Precio: $${producto.precio}`);
+});
+let precioMaximo = parseInt(prompt("Ingrese el precio maximo a mostrar"));
+const filtrado = Productos.filter(
+  (producto) => producto.precio <= precioMaximo
+);
+console.log(filtrado);
+let buscar = prompt("ingrese el producto para ver si esta disponible");
+let hayStock = Productos.some((producto) => producto.nombre == buscar);
+if (hayStock) {
+  console.log("¡Esta disponible!");
+} else {
+  console.log("¡No esta en stock!");
+}
+const descuento = Productos.map((producto) => {
+  let precioDescuento = producto.precio - (producto.precio * 20) / 100;
+  return {
+    nombre: producto.nombre,
+    precio: precioDescuento,
+  };
+});
+console.log(descuento);
+let titulo = document.getElementById("title");
+let titleContainer = document.getElementById("title-container");
+console.log(titleContainer);
+let Menu = document.getElementsByClassName("menu");
+console.log(menu);
+let container = document.getElementById("container");
+container.innerHTML = "<h2>¡Tenemos las mejores ofertas!</h2>";
+container.className = "main";
+
+Productos.forEach((producto) => {
+  let contenedor = document.createElement("div");
+  contenedor.className = "card";
+  contenedor.innerHTML = `<span>ID: ${producto.id}</span>
+      <h3>Producto: ${producto.nombre}</h3>
+      <h4>Precio: $${producto.precio}</h4>`;
+  container.appendChild(contenedor);
+});
+
+let subtitulo = document.createElement("h2");
+subtitulo.innerHTML = "<span>Ofertas del mes</span>";
+document.body.append(subtitulo);
+let pastas = ["Matarazzo", "lucchetti", "barletta", "Favorita"];
+let productos = document.getElementById("productos");
+for (const pastas of pastas) {
+  let li = document.createElement("li");
+  li.innerHTML = pastas;
+  productos.appendChild(li);
+}
+let evento = document.getElementById("h1");
+let clicks = 0;
+evento.onclick = () => {
+  clicks++;
+  console.log("cantidad de clicks:", clicks);
+};
+let counter = document.getElementById("counter");
+let sumar = document.getElementById("plus-button");
+let restar = document.getElementById("minus-button");
+let contador = 0;
+sumar.onclick = () => {
+  contador++;
+  counter.innerHTML = contador;
+};
+sumar.onclick = () => {
+  contador--;
+  counter.innerHTML = contador;
+};
+let input = document.getElementById("input");
+input.onkeydown = () => {
+  console.log("apretaste una tecla");
+};
+const cervezas = [
+  "quilmes",
+  "brahama",
+  "heineken",
+  "stella artois",
+  "schneider",
+];
+input.onchange = () => {
+  const element = cervezas.find((cerveza) => cerveza === input.value);
+  console.log(element);
+};
