@@ -102,14 +102,14 @@
     "nombre": "Agua Villamanaos x2L (6u)",
     "precio": 3000,
     "precioxunidad": 500,
-    "imagen": "./assets/villamanaos.jpg"
+    "imagen": "./assets/aguamanaos.webp"
   },
   {
     "id": 16,
-    "nombre": "sal colosal x20u",
-    "precio": 7500,
-    "precioxunidad": 375,
-    "imagen": "./assets/colosal.webp"
+    "nombre": "Sedal 250ml x12u",
+    "precio": 25000,
+    "precioxunidad": 2083.33,
+    "imagen": "./assets/sedal.jpeg"
   },
   {
     "id": 17,

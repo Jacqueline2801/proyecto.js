@@ -1,13 +1,14 @@
-let container = document.getElementById("nombre-container");
+let columna1 = document.getElementById("nombre-container");
 let columna2 = document.getElementById("producto-container");
 let columna3 = document.getElementById("precio-container");
-
 fetch("./db/data.json")
   .then(response => response.json())
   .then(data => {
-    data.forEach(producto => {
+    const productosFiltrados = data.filter(producto => producto.id <= 9);
+
+    productosFiltrados.forEach(producto => {
       const card = document.createElement("div");
-      card.classList.add("grid-item")
+      card.classList.add("grid-item");
       card.innerHTML = `
         <h2>Producto: ${producto.nombre}</h2>
         <img src="${producto.imagen}" alt="${producto.nombre}">
@@ -15,10 +16,44 @@ fetch("./db/data.json")
         <h4>Precio Unitario: ${producto.precioxunidad}</h4>
         <button onclick="mostrarToast('${producto.nombre}')">Añadir</button>
       `;
-      container.appendChild(card);
+      columna1.appendChild(card);
     });
   });
+ fetch("./db/data.json")
+  .then(response => response.json())
+  .then(data => {
+    const productosFiltrados = data.filter(producto => producto.id >= 10 && producto.id <= 18);
+    productosFiltrados.forEach(producto => {
+      const card = document.createElement("div");
+      card.classList.add("grid-item");
+      card.innerHTML = `
+        <h2>Producto: ${producto.nombre}</h2>
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+        <h3>Precio Mayorista: ${producto.precio}</h3>
+        <h4>Precio Unitario: ${producto.precioxunidad}</h4>
+        <button onclick="mostrarToast('${producto.nombre}')">Añadir</button>
+      `;
+      columna2.appendChild(card);
+    });
+  });
+  fetch("./db/data.json")
+  .then(response => response.json())
+  .then(data => {
+    const productosFiltrados = data.filter(producto => producto.id >=19 );
 
+    productosFiltrados.forEach(producto => {
+      const card = document.createElement("div");
+      card.classList.add("grid-item");
+      card.innerHTML = `
+        <h2>Producto: ${producto.nombre}</h2>
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+        <h3>Precio Mayorista: ${producto.precio}</h3>
+        <h4>Precio Unitario: ${producto.precioxunidad}</h4>
+        <button onclick="mostrarToast('${producto.nombre}')">Añadir</button>
+      `;
+      columna3.appendChild(card);
+    });
+  });
 function mostrarToast(nombreProducto) {
   Toastify({
     text: `¡${nombreProducto} añadido al carrito!`,
