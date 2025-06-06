@@ -1,8 +1,10 @@
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header header header" "content content content" "footer footer footer";
+  grid-template-areas: "header header header" 
+                       "content content content"  
+                       "footer footer footer";
   gap: 20px;
   padding: 0;
   margin-bottom: 20px;
@@ -12,14 +14,13 @@
 }
 
 .content-grid {
-  display: flex;
-  margin-right: 10px;
-  margin-top: 30px;
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  gap: 20px;
   padding: 0 20px;
-  justify-content: flex-start;
   width: 100%;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+}
 }
 
 .grid-item {
@@ -39,7 +40,27 @@
   font-size: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.btn-shop {
+ .block-element img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+.header {
+  grid-area: header;
+  background-color: #07ccb2;
+  color: #f7f8f8;
+  padding: 20px 0;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.main-content {
+  grid-area: content;
+  width: 100%;
+}
+
+button {
   display: inline-block;
   padding: 10px 20px;
   color: white;
@@ -50,7 +71,7 @@
   transition: background-color 0.5s ease;
   animation: pulse 1s infinite;
 }
-.btn-shophover {
+button:hover  {
   background-color: rgb(93, 95, 93);
 }
 @keyframes pulse {
@@ -85,4 +106,8 @@
 }
 .center-text {
   text-align: center;
+}
+.animate__animated.animate__fadeInLeftBig {
+  --animate-duration: 4s;
+  animation-iteration-count: infinite;
 }

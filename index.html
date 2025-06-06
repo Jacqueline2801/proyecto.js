@@ -3,46 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.css" />
-    <script src="./js/script.js" defer></script>
+    <script defer src="./js/script.js" ></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div id="title-container">
-        <h1 id="h1">Autoservicio Muñoz</h1>
+        <h1 class="animate__animated animate__fadeInLeftBig">Autoservicio Muñoz</h1>
       </div>
-      <input type="text" id="input" />
-      <div id="container"></div>
-      <ul id="asesores"></ul>
-      <div id="productos"></div>
     </header>
-    <main>
-      <button id="plus-button">+</button>
-      <span id="counter">0</span>
-      <button id="minus-button">-</button>
+    <main class="main-content">
       <section class="grid-container content-grid">
         <article class="grid-item">
           <div class="block-element">
             <div class="center-text">
-              <img src="./assets/colosal.webp" alt="colosal" />
-            </div>
-            <h2 id="producto-nombre"></h2>
-
+              <div id="nombre-container"></div>
+          </div>
+        </article>
+        <article class="grid-item">
+          <div class="block-element">
             <div class="center-text">
-              <button class="btn-shop">Contactar</button>
-            </div>
+              <div id="producto-container"></div>
+          </div>
+        </article>
+        <article class="grid-item">
+          <div class="block-element">
+            <div class="center-text">
+              <div id="precio-container"></div>
           </div>
         </article>
       </section>
     </main>
-    <footer>
-      <ul>
+    <footer class="footer">
         <li class="menu">Inicio</li>
         <li class="menu">Productos</li>
         <li class="menu">Sobre Nosotros</li>
       </ul>
     </footer>
-    <section id="productos-container"></section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </body>
 </html>
