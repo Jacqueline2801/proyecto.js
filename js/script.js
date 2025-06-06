@@ -34,7 +34,7 @@ console.log(bebidas.join("-"));
 bebidas.forEach((bebida, indice) => {
   console.log(`Posición ${indice}: ${bebida}`);
 });
-const Manos = {
+const Manaos = {
   Sabor: "cola",
   Cantidad: "6 x 1.25L",
   Stock: 10,
@@ -203,48 +203,6 @@ numerador(numero, (numero) => {
   tablaDel10.push(numero * 10);
 });
 console.log(tablaDel10);
-const Productos = [
-  {
-    id: 1,
-    nombre: "sal colosal",
-    precio: 7500,
-  },
-  {
-    id: 2,
-    nombre: "presto pronta",
-    precio: 12000,
-  },
-  {
-    id: 3,
-    nombre: "fideos nido Doña Irma",
-    precio: 10000,
-  },
-  {
-    id: 4,
-    nombre: "Baggio 1L",
-    precio: 6500,
-  },
-  {
-    id: 5,
-    nombre: "jabon en polvo ala x400gr",
-    precio: 27000,
-  },
-  {
-    id: 6,
-    nombre: "alfajor guaymallen",
-    precio: 7500,
-  },
-  {
-    id: 7,
-    nombre: "turron Arcor",
-    precio: 5500,
-  },
-  {
-    id: 8,
-    nombre: "jugo cepita botela x 1L",
-    precio: 7000,
-  },
-];
 forEach();
 Productos.forEach((producto) => {
   console.log(`Producto: ${producto.nombre}, Precio: $${producto.precio}`);
@@ -330,3 +288,14 @@ input.onchange = () => {
   const element = cervezas.find((cerveza) => cerveza === input.value);
   console.log(element);
 };
+let container = document.getElementById("producto-nombre");
+
+fetch("./db/data.json")
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((producto) => {
+      const card = document.createElement("div");
+      card.innerHTML = `<h2>Producto: ${producto.nombre}</h2>`;
+      container.appendChild(card);
+    });
+  });

@@ -1,0 +1,88 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header header header" "content content content" "footer footer footer";
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.content-grid {
+  display: flex;
+  margin-right: 10px;
+  margin-top: 30px;
+  padding: 0 20px;
+  justify-content: flex-start;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.grid-item {
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 0 0 33.33%;
+  scroll-snap-align: center;
+}
+.block-element {
+  background-color: white;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn-shop {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #080808;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  animation: pulse 1s infinite;
+}
+.btn-shophover {
+  background-color: rgb(93, 95, 93);
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+.footer li {
+  display: inline;
+  margin: 0 10px;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.center-text {
+  text-align: center;
+}

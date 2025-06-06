@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "nombre": "sal colosal x20u",
+    "precio": 7500,
+    "precioxunidad": 375
+  },
+  {
+    "id": 2,
+    "nombre": "presto pronta x10u",
+    "precio": 12000,
+    "precioxunidad": 1200
+  },
+  {
+    "id": 3,
+    "nombre": "fideos nido Doña Irma x10u",
+    "precio": 10000,
+    "precioxunidad": 1000
+  },
+  {
+    "id": 4,
+    "nombre": "Baggio 1L x6",
+    "precio": 6500,
+    "precioxunidad": 1416.66
+  },
+  {
+    "id": 5,
+    "nombre": "jabon en polvo ala x400gr (24u)",
+    "precio": 27000,
+    "precioxunidad": 1125
+  },
+  {
+    "id": 6,
+    "nombre": "alfajor guaymallen (40u)",
+    "precio": 7500,
+    "precioxunidad": 187.5
+  },
+  {
+    "id": 7,
+    "nombre": "turron Arcor x25u",
+    "precio": 5500,
+    "precioxunidad": 220
+  },
+  {
+    "id": 8,
+    "nombre": "jugo cepita botela x 1L (6u)",
+    "precio": 7000,
+    "precioxunidad": 1166.66
+  },
+  {
+    "id": 9,
+    "nombre": "jugo placer x 1,5L (6u)",
+    "precio": 4500,
+    "precioxunidad": 750
+  },
+  {
+    "id": 10,
+    "nombre": "coca cola x 2.25L (8u)",
+    "precio": 7000,
+    "precioxunidad": 1166.66
+  },
+  {
+    "id": 11,
+    "nombre": "matarazzo x20u",
+    "precio": 24000,
+    "precioxunidad": 1200
+  },
+  {
+    "id": 12,
+    "nombre": "Manaos gaseosa(6u)",
+    "precio": 6000,
+    "precioxunidad": 1000
+  },
+  {
+    "id": 13,
+    "nombre": "Cajon de cerveza Brahama x12u",
+    "precio": 24000,
+    "precioxunidad": 2000
+  },
+  {
+    "id": 14,
+    "nombre": "Brahma en lata x24u",
+    "precio": 24500,
+    "precioxunidad": 1020.33
+  },
+  {
+    "id": 15,
+    "nombre": "Agua Villamanaos x2L (6u)",
+    "precio": 3000,
+    "precioxunidad": 500
+  }
+]
