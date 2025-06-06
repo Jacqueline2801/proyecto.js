@@ -285,17 +285,17 @@ const cervezas = [
   "schneider",
 ];
 input.onchange = () => {
-  const element = cervezas.find((cerveza) => cerveza === input.value);
+  const element = cervezas.find(cerveza => cerveza === input.value);
   console.log(element);
 };
-let container = document.getElementById("producto-nombre");
+let container = document.getElementById("productos-container");
 
 fetch("./db/data.json")
-  .then((response) => response.json())
-  .then((data) => {
-    data.forEach((producto) => {
-      const card = document.createElement("div");
-      card.innerHTML = `<h2>Producto: ${producto.nombre}</h2>`;
-      container.appendChild(card);
-    });
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(producto => {
+      const card = document.createElement("div")
+      card.innerHTML = `<h2>Producto: ${producto.nombre}</h2>`
+      container.appendChild(card)
+    })
   });
